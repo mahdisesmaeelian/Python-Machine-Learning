@@ -1,5 +1,6 @@
 Drawing a 3D scatter that contains mellons and ballons detail (width,hieght and weight)
-## ![2022-01-19_16-32-20](https://user-images.githubusercontent.com/88204357/150136031-cdda497c-b5e8-4675-af83-03aa312946b1.png)
+## 
+![2022-01-19_18-05-08](https://user-images.githubusercontent.com/88204357/150151879-34c40537-2e3e-4a33-a34d-f7de1de6b723.png)
 
 
 ## Data distribution map
