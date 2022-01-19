@@ -26,5 +26,6 @@ It can be seen from the box diagram that there are obvious differences in the le
 ![b631eeca619e3b77df6dcfdc3e43fe30](https://user-images.githubusercontent.com/88204357/150136891-aabaaf0b-dbb8-4212-8062-b1ec1d55e4fb.jpg)
 
 
-At the end you can follow this website to learn and practice these Python virtualization:
+At the end you can follow this website to learn and practice about Python virtualization:
+
 https://www.fatalerrors.org/a/python-visualization-case-fruit-classification-banana-and-apple-war.html
