@@ -28,7 +28,13 @@ class KNearestNeighbors:
             y_pred.append(np.argmax(np.bincount(self.y_train[neighbor])))
         return np.array(y_pred)
     
-    def evaluate(self, X_test, y_test):
-        y_pred = self.predict(X_test)
-        evaluatation = (y_pred == y_test).sum() / len(y_test)
-        return evaluatation
+    def evaluate(self,X_test,Y_test):
+        counter = 0
+        for i in range(len(X_test)):
+            y_pred = Knn.predict(X_test[i])
+
+            if y_pred == Y_test[i]:
+                counter+=1
+                
+        accuracy = counter / len(X_test) * 100
+        return accuracy 
