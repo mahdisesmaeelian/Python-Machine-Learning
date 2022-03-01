@@ -1,0 +1,86 @@
+2022-03-01 18:08:04,400 INFO    MainThread:7364 [wandb_setup.py:_flush():75] Loading settings from C:\Users\User\.config\wandb\settings
+2022-03-01 18:08:04,401 INFO    MainThread:7364 [wandb_setup.py:_flush():75] Loading settings from E:\Python\Mahdis Projects\assignment-41\wandb\settings
+2022-03-01 18:08:04,401 INFO    MainThread:7364 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-01 18:08:04,401 INFO    MainThread:7364 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-03-01 18:08:04,402 INFO    MainThread:7364 [wandb_init.py:_log_setup():386] Logging user logs to E:\Python\Mahdis Projects\assignment-41\wandb\run-20220301_180804-27ndd8rk\logs\debug.log
+2022-03-01 18:08:04,403 INFO    MainThread:7364 [wandb_init.py:_log_setup():387] Logging internal logs to E:\Python\Mahdis Projects\assignment-41\wandb\run-20220301_180804-27ndd8rk\logs\debug-internal.log
+2022-03-01 18:08:04,404 INFO    MainThread:7364 [wandb_init.py:_jupyter_setup():336] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001B2B301D6D0>
+2022-03-01 18:08:04,405 INFO    MainThread:7364 [wandb_init.py:init():420] calling init triggers
+2022-03-01 18:08:04,405 INFO    MainThread:7364 [wandb_init.py:init():425] wandb.init called with sweep_config: {}
+config: {}
+2022-03-01 18:08:04,406 INFO    MainThread:7364 [wandb_init.py:init():471] starting backend
+2022-03-01 18:08:04,406 INFO    MainThread:7364 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn, using: spawn
+2022-03-01 18:08:04,412 INFO    MainThread:7364 [backend.py:ensure_launched():219] starting backend process...
+2022-03-01 18:08:04,510 INFO    MainThread:7364 [backend.py:ensure_launched():224] started backend process with pid: 11860
+2022-03-01 18:08:04,510 INFO    MainThread:7364 [wandb_init.py:init():480] backend started and connected
+2022-03-01 18:08:04,549 INFO    MainThread:7364 [wandb_run.py:_label_probe_notebook():921] probe notebook
+2022-03-01 18:08:04,550 INFO    MainThread:7364 [wandb_init.py:init():550] updated telemetry
+2022-03-01 18:08:04,559 INFO    MainThread:7364 [wandb_init.py:init():581] communicating current version
+2022-03-01 18:08:05,155 ERROR   Thread-12 :7364 [retry.py:__call__():126] Retry attempt failed:
+Traceback (most recent call last):
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "c:\users\user\appdata\local\programs\python\python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001B2B5C5DF40>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B2B5C5DF40>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\wandb\sdk\lib\retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\wandb\sdk\internal\internal_api.py", line 140, in execute
+    return self.client.execute(*args, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\wandb\vendor\gql-0.2.0\gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\wandb\vendor\gql-0.2.0\gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\wandb\vendor\gql-0.2.0\gql\transport\requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B2B5C5DF40>: Failed to establish a new connection: [Errno 11002] getaddrinfo failed'))
+2022-03-01 18:08:09,567 INFO    MainThread:7364 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-03-01 18:08:39,575 INFO    MainThread:7364 [interface_shared.py:_communicate_run():313] couldn't get run from backend
+2022-03-01 18:08:39,576 ERROR   MainThread:7364 [wandb_init.py:init():601] backend process timed out
+2022-03-01 18:08:39,576 ERROR   MainThread:7364 [wandb_init.py:init():610] encountered error: Error communicating with wandb process
+try: wandb.init(settings=wandb.Settings(start_method='fork'))
+or:  wandb.init(settings=wandb.Settings(start_method='thread'))
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2022-03-01 18:08:47,247 INFO    MainThread:7364 [wandb_init.py:teardown():234] tearing down wandb.init
